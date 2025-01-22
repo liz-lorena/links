@@ -1,0 +1,45 @@
+# Site Info
+title:              "Liz Lorena's Links"
+description:        "here are links to the websites i use"
+
+# Author Info
+author_name:        Liz Lorena
+
+# Site Settings
+baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+permalink:          /projects/:title # Post permalink
+timezone:           America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+language:           en-US
+favicon:            /links/sitewideimg-red.png
+logo:               /links/sitewideimg-red.png
+
+# Pagination Settings
+paginate_path: "/pg-:num/"
+paginate: 5
+
+# Site Build
+highlighter: rouge
+markdown: kramdown
+gems:
+  - jekyll-sitemap
+  - tzinfo
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:          "posts"
+    values:
+      layout:        "post"

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZRQRE93CG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GZRQRE93CG');
+</script>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="image" property="og:image" content="{{ site.logo }}">
+      <meta name="description" property="og:description" content="{{ site.description }}">
+      <meta name="title" property="og:title" content="{{ site.title }}">
+      <meta name="author" content="{{ site.author_name }}">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://lizlorena.com/links">
+      {{ page.meta }}
+      <title>{{ site.title }} {{ page.title }}</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <link rel="stylesheet" href="/art/uikit/css/uikit.min.css" />
+      <link href="/index2.css" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
+
+      <script src="/art/uikit/js/uikit.min.js"></script>
+      <script src="/art/uikit/js/uikit-icons.min.js"></script>
+      <script src="https://kit.fontawesome.com/56182aba27.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+
+      {% include playlist.html %}
+ 
+      <div class="canvas">
+         <div class="links"> <!--uk-scrollspy="cls:uk-animation-fade; target: .link; delay:300;"-->
+            <a href="/links" style="width: 150px;display: block;margin-left: auto;margin-right: auto;border-radius: 100%;">
+               <img src="{{ site.logo }}" class="logo">
+            </a>
+            <a href="/links" style="width: 160px;display: block;margin: 0 auto;">
+               <h1 style="text-transform:uppercase;">Liz&nbsp;Lorena</h1>
+            </a>
+            <p style="text-align:center;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;">web dev, polyglot, doodler</p>
+            <div id="bio" class="hidden"> <!--uk-scrollspy="cls:uk-animation-slide-top;"-->
+               {{content}}
+            </div>            
+            <p id="less" class="hidden" style="text-align:center;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;margin-top:1rem;">
+               <a href="#top">Hide</a>
+            </p>
+            <p id="more" style="text-align:center;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;">
+               <a href="#">Learn more</a>
+            </p>
+            {% include links.html %}
+         </div>
+         <div style="clear:both;"></div> {% include footer.html %}
+      </div>
+      <script src="/showAboutMe.js"></script>
+      <script src="/mode-switcher.js"></script>
+   </body>
+</html>
